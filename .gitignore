@@ -4,3 +4,8 @@
 
 *.sublime-workspace
 *.sublime-project
+
+out
+node_modules
+.vscode-test/
+*.vsix

@@ -23,6 +23,10 @@
         "Programming Languages",
         "Snippets"
     ],
+    "main": "./out/extension.js",
+    "activationEvents": [
+        "onLanguage:clarion"
+    ],
     "contributes": {
         "languages": [
             {
@@ -57,5 +61,16 @@
                 "path": "./snippets/clarion.json"
             }
         ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.41.0",
+        "typescript": "^3.7.5",
+        "vscode-test": "^1.3.0"
     }
 }
